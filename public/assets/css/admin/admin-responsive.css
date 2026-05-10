@@ -1,0 +1,289 @@
+/* ================================
+   Admin Panel - Responsive Styles
+   ================================ */
+
+/* Mobile: Stack info box items */
+@media (max-width: 640px) {
+  .admin-info-box {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .admin-section-header {
+    padding: 16px 20px;
+    margin: 24px 0 16px;
+  }
+
+  .admin-toggle-btn {
+    max-width: 100%;
+  }
+
+  .admin-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+  }
+
+  .admin-nav-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .admin-nav-card {
+    padding: 18px;
+  }
+
+  .admin-nav-card-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.35rem;
+  }
+
+  .admin-nav-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .admin-table {
+    font-size: 0.9rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 12px;
+  }
+
+  /* Convert candidates table to card layout on mobile */
+  #candidates-table {
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  #candidates-table thead {
+    display: none;
+  }
+
+  #candidates-table tbody {
+    display: block;
+  }
+
+  #candidates-table tr.candidate-row {
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(15,23,42,0.12);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.08);
+  }
+
+  #candidates-table tr.candidate-row:hover {
+    background: #fff;
+    transform: none;
+  }
+
+  #candidates-table td {
+    display: block;
+    border: none;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  #candidates-table td:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Add labels before content on mobile */
+  #candidates-table td:nth-child(1)::before {
+    content: "ID: ";
+    font-weight: 600;
+    color: var(--text);
+    margin-right: 8px;
+  }
+
+  #candidates-table td:nth-child(2)::before {
+    content: "Name: ";
+    font-weight: 600;
+    color: var(--text);
+    margin-right: 8px;
+  }
+
+  #candidates-table td:nth-child(3)::before {
+    content: "LinkedIn: ";
+    font-weight: 600;
+    color: var(--text);
+    margin-right: 8px;
+  }
+
+  #candidates-table td:nth-child(4)::before {
+    content: "Manifest: ";
+    font-weight: 600;
+    color: var(--text);
+    margin-right: 8px;
+  }
+
+  /* Hide empty LinkedIn and Manifest cells */
+  #candidates-table td:nth-child(3):has(.muted),
+  #candidates-table td:nth-child(4):has(.muted) {
+    display: none;
+  }
+
+  /* Action buttons */
+  #candidates-table td:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(15,23,42,0.08);
+  }
+
+  #candidates-table td:last-child::before {
+    display: none;
+  }
+
+  .candidate-edit-btn {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .candidate-delete-form {
+    width: 100%;
+  }
+
+  .candidate-delete-form .candidate-edit-btn {
+    width: 100%;
+  }
+
+  /* Edit form as full-width block */
+  .candidate-edit-row {
+    display: none !important;
+  }
+
+  .candidate-edit-row[style*="table-row"] {
+    display: block !important;
+    background: var(--bg-accent);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.08);
+  }
+
+  .candidate-edit-row td {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: none;
+  }
+
+  .candidate-edit-form {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .candidate-form-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .candidate-form-actions button {
+    width: 100%;
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .candidate-edit-btn,
+  .candidate-delete-form .candidate-edit-btn {
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Responsive adjustments for onboarding */
+@media (max-width: 640px) {
+  .onboarding-banner {
+    padding: 14px;
+    margin: 12px 0 16px 0;
+  }
+
+  .onboarding-title {
+    gap: 8px;
+  }
+
+  .onboarding-title h3 {
+    font-size: 0.95rem;
+  }
+
+  .onboarding-progress-text {
+    font-size: 0.75rem;
+  }
+
+  .onboarding-step {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .step-action {
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .onboarding-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .onboarding-hint {
+    text-align: center;
+  }
+
+  .btn-secondary.btn-small {
+    width: 100%;
+  }
+}
+
+/* Mobile: Stack form fields vertically */
+@media (max-width: 768px) {
+  .admin-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .admin-form button[type="submit"] {
+    grid-column: 1;
+  }
+}
+
+/* Mobile: Full width for better usability */
+@media (max-width: 640px) {
+  form label.row,
+  form input[type="number"],
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="url"],
+  form select,
+  form button[type="submit"] {
+    max-width: 100%;
+  }
+
+  .admin-form input[type="number"] {
+    max-width: 100%;
+  }
+}
+
+/* Mobile adjustments for Quill */
+@media (max-width: 640px) {
+  .ql-editor {
+    min-height: 120px;
+    padding: 14px 16px;
+  }
+
+  .ql-toolbar.ql-snow {
+    padding: 10px;
+  }
+}

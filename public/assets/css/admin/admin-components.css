@@ -1,0 +1,255 @@
+/* ================================
+   Admin Panel - Component Styles
+   ================================ */
+
+/* Manual control buttons */
+.admin-toggle-btn {
+  padding: clamp(14px, 2vw, 18px) clamp(24px, 3vw, 32px);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-toggle-btn.open {
+  background: linear-gradient(120deg, var(--admin-success), var(--admin-success-hover));
+}
+
+.admin-toggle-btn.open:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.3);
+}
+
+.admin-toggle-btn.close {
+  background: linear-gradient(120deg, var(--admin-danger), var(--admin-danger-hover));
+}
+
+.admin-toggle-btn.close:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239,68,68,0.3);
+}
+
+.admin-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.admin-danger-btn {
+  background: linear-gradient(120deg, var(--admin-danger), var(--admin-danger-hover));
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: clamp(12px, 1.8vw, 16px) clamp(20px, 2.5vw, 28px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(239,68,68,0.2);
+}
+
+.admin-danger-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239,68,68,0.35);
+}
+
+.admin-danger-btn:active {
+  transform: translateY(0);
+}
+
+/* Alert boxes for admin */
+.admin-alert {
+  padding: clamp(16px, 2vw, 20px) clamp(18px, 2.5vw, 24px);
+  border-radius: 18px;
+  margin: clamp(16px, 2vw, 24px) 0;
+  border: 1px solid;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  animation: floatUp 0.6s ease forwards;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.admin-alert:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+.admin-alert.warning {
+  background: #fff8e1;
+  color: #f57c00;
+  border-color: rgba(245,124,0,0.25);
+}
+
+.admin-alert strong {
+  font-weight: 650;
+  color: #e65100;
+}
+
+.admin-alert a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.admin-alert a:hover {
+  color: var(--primary-hover);
+}
+
+/* Participation stats */
+.admin-participation {
+  background: var(--info-bg);
+  border: 1px solid var(--info-bd);
+  color: var(--info-fg);
+  padding: clamp(18px, 2.5vw, 24px);
+  border-radius: 18px;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  line-height: 1.8;
+  box-shadow: 0 4px 12px rgba(0,98,255,0.08);
+  animation: floatUp 0.6s ease forwards;
+  transition: all 0.2s ease;
+}
+
+.admin-participation:hover {
+  box-shadow: 0 8px 20px rgba(0,98,255,0.15);
+  transform: translateY(-1px);
+}
+
+.admin-participation strong {
+  font-weight: 650;
+  color: var(--info-fg);
+}
+
+.admin-participation .muted {
+  color: var(--muted);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  border-radius: 999px;
+  padding: 0.35em 1em;
+  font-weight: 600;
+  border: 1px solid transparent;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.status-badge.status-open {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--admin-success);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.status-badge.status-open:hover {
+  background: rgba(16, 185, 129, 0.18);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.status-badge.status-closed {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: var(--admin-danger);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
+}
+
+.status-badge.status-closed:hover {
+  background: rgba(239, 68, 68, 0.18);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+/* Navigation Menu Cards */
+.admin-nav-menu {
+  margin-bottom: clamp(32px, 4vw, 48px);
+  animation: floatUp 0.6s ease forwards;
+}
+
+.admin-nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: clamp(20px, 2.5vw, 32px);
+}
+
+.admin-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(18px, 2.2vw, 24px);
+  background: #fff;
+  border: 2px solid rgba(15,23,42,0.08);
+  border-radius: 20px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-nav-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(120deg, var(--primary), var(--primary-hover));
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.admin-nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(224,0,15,0.2);
+  border-color: rgba(224,0,15,0.3);
+}
+
+.admin-nav-card:hover::before {
+  transform: scaleX(1);
+}
+
+.admin-nav-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.admin-nav-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--bg-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  filter: grayscale(0.1);
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.admin-nav-card:hover .admin-nav-card-icon {
+  transform: translateY(-1px) scale(1.05);
+  filter: grayscale(0);
+}
+
+.admin-nav-card h3 {
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-weight: 650;
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.admin-nav-card p {
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}

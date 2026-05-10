@@ -1,0 +1,250 @@
+/* ================================
+   Admin Panel - Layout Styles
+   ================================ */
+
+/* Main title styling */
+.admin-main-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.75em;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  animation: floatUp 0.6s ease forwards;
+}
+
+/* Section headers - modern, conversational style */
+.admin-section-header {
+  background: var(--bg-accent);
+  color: var(--text);
+  padding: clamp(18px, 2.5vw, 24px);
+  margin: clamp(32px, 4vw, 48px) 0 clamp(16px, 2vw, 24px);
+  border-radius: 20px;
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  animation: floatUp 0.6s ease forwards;
+  transition: all 0.2s ease;
+}
+
+.admin-section-header:hover {
+  box-shadow: 0 8px 20px rgba(224,0,15,0.12);
+  transform: translateY(-1px);
+}
+
+.admin-section-header.charcoal,
+.admin-section-header.slate {
+  background: var(--bg-accent);
+  border-color: rgba(15,23,42,0.08);
+}
+
+/* Extra breathing room below back link on admin pages */
+.back-link {
+  margin-bottom: clamp(32px, 4vw, 52px);
+}
+
+/* Info boxes - light, modern styling */
+.admin-info-box {
+  padding: clamp(18px, 2.5vw, 24px);
+  background: var(--admin-section-bg);
+  border: 1px solid rgba(15,23,42,0.08);
+  color: var(--text);
+  border-radius: 18px;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+  line-height: 1.7;
+  animation: floatUp 0.6s ease forwards;
+  transition: all 0.2s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.admin-info-box:hover {
+  box-shadow: 0 8px 20px rgba(15,23,42,0.1);
+  transform: translateY(-1px);
+}
+
+.admin-info-box strong {
+  font-weight: 650;
+  color: var(--text);
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.admin-info-box > br {
+  display: none;
+}
+
+.admin-info-box .muted,
+.admin-info-box .local-time {
+  color: var(--muted);
+}
+
+.admin-info-box .status-indicator {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.admin-info-box .status-indicator.success {
+  color: var(--admin-success);
+}
+
+/* Info box items styling */
+.admin-info-box .info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-info-box .info-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.admin-info-box .info-value {
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+/* Section dividers */
+.admin-divider {
+  border: none;
+  border-top: 1px solid rgba(15,23,42,0.1);
+  margin: clamp(40px, 5vw, 64px) 0;
+}
+
+/* Subsection headers */
+.admin-subsection {
+  margin-bottom: clamp(24px, 3vw, 32px);
+  animation: floatUp 0.6s ease forwards;
+}
+
+.admin-subsection h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-weight: 650;
+  margin-bottom: 0.75em;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.admin-subsection h4 {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+/* Form styling for admin */
+.admin-form {
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.mode-select-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.mode-select-row label.row {
+  flex: 1;
+  margin-bottom: 0;
+  min-width: 280px;
+}
+
+.mode-select-row select {
+  min-width: 280px;
+}
+
+.mode-select-row button {
+  width: auto;
+  min-width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Period configuration box */
+.admin-period-box {
+  padding: clamp(18px, 2.5vw, 24px);
+  background: var(--info-bg);
+  border: 1px solid var(--info-bd);
+  color: var(--info-fg);
+  border-radius: 18px;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  line-height: 1.8;
+  box-shadow: 0 4px 12px rgba(0,98,255,0.08);
+  animation: floatUp 0.6s ease forwards;
+  transition: all 0.2s ease;
+}
+
+.admin-period-box:hover {
+  box-shadow: 0 8px 20px rgba(0,98,255,0.15);
+  transform: translateY(-1px);
+}
+
+.admin-period-box strong {
+  font-weight: 650;
+  color: var(--info-fg);
+}
+
+.admin-period-box em {
+  color: color-mix(in srgb, var(--info-fg) 75%, white);
+}
+
+.admin-period-box .period-status {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+
+.admin-period-box .period-status.active {
+  color: var(--admin-success);
+}
+
+.admin-period-box .period-status.future,
+.admin-period-box .period-status.expired {
+  color: var(--muted);
+}
+
+/* Form note text */
+.admin-form-note {
+  margin-top: 0.5em;
+  color: var(--muted);
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  line-height: 1.6;
+}
+
+/* Section containers */
+.admin-section {
+  margin-bottom: clamp(40px, 5vw, 64px);
+  animation: floatUp 0.6s ease forwards;
+}
+
+/* Download section */
+.admin-download-section {
+  margin-top: clamp(32px, 4vw, 48px);
+  animation: floatUp 0.6s ease forwards;
+}
+
+.admin-download-section h2 {
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 650;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.admin-download-section form {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+# ============================================
+# PHP-SURVEY-BACKEND PROTECTION
+# ============================================
+# This directory contains ALL backend application code and data.
+# It should NEVER be in the web-accessible directory.
+# This .htaccess is a failsafe in case of server misconfiguration.
+
+# Deny all access to everything in this directory
+Order Deny,Allow
+Deny from all
+
+# Disable directory browsing
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Block all file types
+<FilesMatch ".*">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Explicitly deny specific sensitive files
+<FilesMatch "^(\.env|\.git.*|composer\.(json|lock)|package\.json|.*\.txt|.*\.csv|.*\.json|.*\.log)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect .htaccess itself
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Additional security: prevent PHP execution if somehow accessed
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>

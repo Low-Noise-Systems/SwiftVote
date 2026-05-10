@@ -1,0 +1,8 @@
+{
+    "app_name": "Community Election",
+    "mail_mode": "hosting",
+    "hosting_from_address": "noreply@example.org",
+    "hosting_from_name": "Election Bot",
+    "hosting_reply_to_address": "support@example.org",
+    "hosting_reply_to_name": "Election Support"
+}

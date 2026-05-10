@@ -1,0 +1,13 @@
+/* ================================
+   Admin Panel - Main Stylesheet
+   ================================ */
+
+/* Import modular admin stylesheets */
+@import url('admin/admin-variables.css');
+@import url('admin/admin-layout.css');
+@import url('admin/admin-components.css');
+@import url('admin/admin-tables.css');
+@import url('admin/admin-onboarding.css');
+@import url('admin/admin-forms.css');
+@import url('admin/admin-editor.css');
+@import url('admin/admin-responsive.css');

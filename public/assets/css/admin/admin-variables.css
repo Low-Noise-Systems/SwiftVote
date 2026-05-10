@@ -1,0 +1,15 @@
+/* ================================
+   Admin Panel - CSS Variables
+   ================================ */
+
+/* Admin-specific enhancements */
+:root {
+  --admin-accent: var(--primary);
+  --admin-accent-hover: var(--primary-hover);
+  --admin-success: #10b981;
+  --admin-success-hover: #059669;
+  --admin-danger: #ef4444;
+  --admin-danger-hover: #dc2626;
+  --admin-section-bg: rgba(224,0,15,0.03);
+  --admin-section-border: rgba(224,0,15,0.12);
+}

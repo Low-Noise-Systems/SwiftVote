@@ -1,0 +1,227 @@
+/* ================================
+   Board Election — Component Styles
+   ================================ */
+
+button:not(.statement-toggle):not(.manifesto-overlay-close),
+.primary-btn{
+  appearance:none;
+  border:none;
+  border-radius:30px;
+  padding:16px 28px;
+  font-size:1rem;
+  font-weight:600;
+  color:#fff;
+  background:linear-gradient(120deg, var(--primary), var(--primary-hover));
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+button:not(.statement-toggle):not(.manifesto-overlay-close):hover,
+.primary-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 28px rgba(176,0,0,.35);
+}
+button:not(.statement-toggle):not(.manifesto-overlay-close):disabled,
+.primary-btn:disabled{
+  cursor:not-allowed;
+  opacity:.6;
+  box-shadow:none;
+}
+
+.ghost-btn{
+  background:transparent;
+  color:var(--primary);
+  border:1px solid rgba(224,0,15,.3);
+}
+
+.secondary{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+}
+.secondary:hover{
+  background:color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.cf-turnstile{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+.count-pill{
+  padding:12px 16px;
+  border-radius:18px;
+  background:color-mix(in srgb, var(--primary) 10%, white);
+  border:1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.count-pill span{color:var(--muted);}
+
+/* Footer */
+.footer{
+  margin:0;
+  color:var(--muted);
+  font-size:.85rem;
+  text-align:center;
+}
+.footer.flow-step{
+  padding:16px 20px;
+  min-height:auto;
+}
+
+/* Admin link */
+.admin-link { text-align: right; }
+
+/* Submit button disabled state */
+#submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Links */
+a:link { color: var(--primary); text-decoration: none; }
+a:visited { color: var(--text); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Admin links styled as buttons */
+.admin-link a {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color .2s;
+}
+.admin-link a:hover {
+    background: var(--primary-hover);
+    text-decoration: none;
+}
+
+/* Back navigation link */
+.back-link {
+    display: block;
+    margin-bottom: var(--gap);
+    font-size: 14px;
+}
+.back-link a {
+    color: var(--primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, rgba(224,0,15,0.15), rgba(224,0,15,0.4));
+    border: 1px solid rgba(224,0,15,0.35);
+    box-shadow: 0 14px 36px rgba(176,0,0,0.25);
+    transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+}
+.back-link a:hover {
+    color: #fff;
+    background: linear-gradient(120deg, rgba(224,0,15,0.28), rgba(224,0,15,0.5));
+    box-shadow: 0 20px 44px rgba(176,0,0,0.35);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.button-link{
+  background:transparent;
+  color:var(--primary);
+  border:1px solid color-mix(in srgb, var(--primary) 60%, transparent);
+  margin-top:4px;
+  margin-bottom:16px;
+  font-size:14px;
+  padding:10px 14px;
+}
+.button-link:hover{
+  background:color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+/* Footer actions share a unified style */
+.disconnect-form{
+  display:flex;
+  align-items:center;
+  margin:0;
+}
+
+/* Footer admin section */
+.footer-admin {
+  text-align: center;
+  margin-top: 0;
+  padding: 12px 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.footer-admin .admin-link {
+  display:flex;
+  margin:0;
+  text-align: center;
+  flex:0 0 auto;
+}
+.footer-admin .disconnect-form {
+  display:flex;
+  align-items:center;
+  margin:0;
+  flex:0 0 auto;
+}
+.footer-admin .admin-link a,
+.footer-admin .disconnect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .18s, transform .12s, box-shadow .12s, border-color .18s, color .18s;
+}
+.footer-admin .admin-link a {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid color-mix(in srgb, var(--primary) 55%, transparent);
+}
+.footer-admin .admin-link a:hover,
+.footer-admin .admin-link a:focus {
+  background: var(--primary-hover);
+  border-color: color-mix(in srgb, var(--primary-hover) 55%, transparent);
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -12px rgba(0,0,0,.45);
+}
+.footer-admin .disconnect-btn {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+  margin-top: 0;
+}
+.footer-admin .disconnect-btn:hover,
+.footer-admin .disconnect-btn:focus {
+  background: color-mix(in srgb, var(--muted) 12%, transparent);
+  border-color: color-mix(in srgb, var(--muted) 60%, transparent);
+  color: var(--text);
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -12px rgba(0,0,0,.45);
+}
+.footer-admin .disconnect-btn:active,
+.footer-admin .admin-link a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

@@ -1,0 +1,49 @@
+# ============================================
+# PUBLIC WEB ROOT CONFIGURATION
+# ============================================
+
+# Allow all visitors to reach the application entry points
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<IfModule mod_access_compat.c>
+    Order Allow,Deny
+    Allow from all
+</IfModule>
+
+# Disable directory listings if someone browses a folder
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# SECURITY: Add security headers to prevent clickjacking and XSS
+<IfModule mod_headers.c>
+    # Prevent page from being embedded in frames/iframes (clickjacking protection)
+    Header always set X-Frame-Options "DENY"
+
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Enable XSS protection in older browsers
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy - only send origin for cross-origin requests
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # SECURITY: HTTP Strict Transport Security (HSTS)
+    # Force HTTPS for 1 year, including all subdomains
+    # NOTE: Only enable this after confirming HTTPS works correctly!
+    # Once enabled, browsers will refuse to connect over HTTP for the duration
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Protect .env and other sensitive root-level files if accidentally placed here
+<FilesMatch "^(\.env|\.git|composer\.(json|lock)|package\.json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule mod_access_compat.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

@@ -1,0 +1,119 @@
+/* ================================
+   Board Election — Modal Styles
+   ================================ */
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(10,14,24,.72);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  z-index:2000;
+}
+.modal-dialog{
+  max-width:460px;
+  width:100%;
+  background:var(--card);
+  border-radius:16px;
+  padding:20px;
+  padding-top:16px;
+  padding-right:50px;
+  border:1px solid var(--border);
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
+  position:relative;
+}
+.modal-dialog h4{
+  margin-top:0;
+  margin-bottom:14px;
+  font-size:17px;
+  padding-right:10px;
+  line-height:1.4;
+}
+.modal-dialog p{
+  margin-top:0;
+  margin-bottom:14px;
+  color:var(--muted);
+  line-height:1.5;
+  font-size:14px;
+}
+.modal-label{
+  display:block;
+  margin-top:14px;
+  margin-bottom:8px;
+  font-weight:600;
+  font-size:14px;
+  color:var(--text);
+}
+.modal-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-end;
+  gap:10px;
+  width:100%;
+  margin-top:20px;
+}
+.modal-actions button{
+  margin-top:0;
+  flex-shrink:0;
+  width:100%;
+  font-size:15px;
+  padding:10px 16px;
+}
+.modal-error{
+  color:var(--err-fg);
+  min-height:20px;
+  margin-top:8px;
+}
+.modal-status{
+  color:var(--muted);
+  min-height:18px;
+  margin-top:8px;
+  font-size:14px;
+}
+.modal-warning{
+  margin:12px 0;
+  padding:12px 16px;
+  border-radius:16px;
+  background:#fff8e1;
+  border:1px solid rgba(245,124,0,0.35);
+  color:#8a4b00;
+  font-size:0.95rem;
+  line-height:1.5;
+  box-shadow:0 8px 18px rgba(245,124,0,0.15);
+}
+.modal-warning strong{
+  display:block;
+  font-weight:650;
+  margin-bottom:4px;
+  color:#8a4b00;
+}
+.modal-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:transparent;
+  border:none;
+  color:var(--muted);
+  font-size:20px;
+  line-height:1;
+  padding:4px 8px;
+  cursor:pointer;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  transition:background-color .2s, color .2s;
+}
+.modal-close:hover{
+  color:var(--text);
+  background:color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+[hidden]{
+  display:none !important;
+}

@@ -1,0 +1,7 @@
+site_name: SwiftVote Documentation
+nav:
+  - Home: index.md
+  - Quickstart: QUICKSTART.md
+  - Debug Mode: DEBUG_MODE.md
+  - Refactoring Guide: REFACTORING_GUIDE.md
+theme: readthedocs

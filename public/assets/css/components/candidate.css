@@ -1,0 +1,426 @@
+/* ================================
+   Board Election — Candidate Styles
+   ================================ */
+
+/* Candidate Cards */
+.candidate-list{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin:8px 0 0;
+}
+.candidate-card-wrapper{
+  container-type:inline-size;
+}
+.candidate-card{
+  background:#fff;
+  border-radius:18px;
+  border:2px solid rgba(15,23,42,.12);
+  transition:all .2s ease;
+  overflow:hidden;
+  box-shadow:0 2px 12px rgba(15,23,42,.08);
+}
+.candidate-card:has(input[type=checkbox]:checked){
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(224,0,15,.1), 0 4px 12px rgba(224,0,15,.15);
+}
+.candidate-card:hover{
+  border-color:rgba(224,0,15,.3);
+  box-shadow:0 4px 16px rgba(15,23,42,.12);
+}
+.candidate-card-main{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px 20px;
+  cursor:pointer;
+}
+.candidate-card input[type=checkbox]{
+  width:20px;
+  height:20px;
+  accent-color:var(--primary);
+  flex-shrink:0;
+  cursor:pointer;
+}
+.candidate-image{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:2px solid rgba(224,0,15,0.15);
+  background:var(--bg-accent);
+  box-shadow:0 2px 8px rgba(15,23,42,0.08);
+  transition:all .2s ease;
+}
+.candidate-card:hover .candidate-image{
+  border-color:rgba(224,0,15,0.3);
+  box-shadow:0 4px 12px rgba(15,23,42,0.12);
+}
+.candidate-card:has(input[type=checkbox]:checked) .candidate-image{
+  border-color:var(--primary);
+  box-shadow:0 0 0 2px rgba(224,0,15,0.1), 0 2px 8px rgba(224,0,15,0.15);
+}
+.candidate-info{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.candidate-name{
+  font-weight:600;
+  color:var(--text);
+  font-size:1.05rem;
+  line-height:1.3;
+}
+.candidate-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+}
+.candidate-linkedin{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+  font-size:.9rem;
+  transition:color .15s ease;
+}
+.candidate-linkedin:hover{
+  color:color-mix(in srgb, var(--primary) 80%, black);
+  text-decoration:underline;
+}
+.candidate-linkedin svg{
+  opacity:.85;
+  flex-shrink:0;
+}
+
+/* Statement Toggle Button */
+button.statement-toggle{
+  display:inline-flex !important;
+  align-items:center;
+  gap:5px;
+  padding:0 !important;
+  background:none !important;
+  border:none !important;
+  border-radius:0 !important;
+  color:var(--primary) !important;
+  font-weight:600;
+  font-size:.9rem !important;
+  cursor:pointer;
+  transition:all .15s ease;
+  font-family:inherit;
+  box-shadow:none !important;
+}
+button.statement-toggle:hover{
+  color:color-mix(in srgb, var(--primary) 80%, black) !important;
+  text-decoration:underline;
+  transform:none !important;
+  box-shadow:none !important;
+}
+button.statement-toggle:active{
+  transform:scale(.98) !important;
+}
+button.statement-toggle:focus-visible{
+  outline:2px solid var(--primary);
+  outline-offset:2px;
+  border-radius:4px;
+}
+.statement-toggle-icon{
+  transition:transform .25s cubic-bezier(0.4,0,0.2,1);
+  flex-shrink:0;
+  margin-top:1px;
+}
+button.statement-toggle[aria-expanded="true"] .statement-toggle-icon{
+  transform:rotate(180deg);
+}
+
+/* Collapsible Statement Content */
+.candidate-statement{
+  margin-top:12px;
+  animation:slideDown .3s cubic-bezier(0.4,0,0.2,1);
+}
+.candidate-statement[hidden]{
+  display:none;
+}
+.candidate-statement-content{
+  padding:16px 20px;
+  background:rgba(224,0,15,.03);
+  border-radius:12px;
+  border:1px solid rgba(224,0,15,.08);
+  line-height:1.7;
+}
+.candidate-statement-content p{
+  margin:0 0 14px 0;
+  color:color-mix(in srgb, var(--text) 92%, white);
+  font-size:.95rem;
+}
+.candidate-statement-content p:last-child{
+  margin-bottom:0;
+}
+
+/* Quill editor HTML output styling */
+.candidate-statement-content strong{
+  font-weight:700;
+  color:var(--text);
+}
+.candidate-statement-content em{
+  font-style:italic;
+}
+.candidate-statement-content u{
+  text-decoration:underline;
+}
+.candidate-statement-content a{
+  color:var(--primary);
+  text-decoration:underline;
+  font-weight:600;
+}
+.candidate-statement-content a:hover{
+  color:var(--primary-hover);
+}
+.candidate-statement-content ol,
+.candidate-statement-content ul{
+  margin:0 0 14px 0;
+  padding-left:1.5em;
+  color:color-mix(in srgb, var(--text) 92%, white);
+}
+.candidate-statement-content ol:last-child,
+.candidate-statement-content ul:last-child{
+  margin-bottom:0;
+}
+.candidate-statement-content li{
+  margin-bottom:6px;
+}
+.candidate-statement-content li:last-child{
+  margin-bottom:0;
+}
+
+/* ================================
+   STV (Single Transferable Vote) Styles
+   ================================ */
+
+.stv-container{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  margin:16px 0;
+}
+
+.stv-section{
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  border:2px solid rgba(15,23,42,.08);
+}
+
+.stv-section.stv-ranked{
+  border-color:var(--primary);
+  background:rgba(224,0,15,.02);
+  min-height:120px;
+}
+
+.stv-section-title{
+  font-size:1rem;
+  font-weight:700;
+  color:var(--text);
+  margin:0 0 4px 0;
+}
+
+.stv-section-hint{
+  font-size:.85rem;
+  color:var(--text-muted);
+  margin:0 0 16px 0;
+}
+
+.stv-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-height:60px;
+}
+
+.stv-candidate{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:#fff;
+  border-radius:12px;
+  border:2px solid rgba(15,23,42,.1);
+  cursor:grab;
+  transition:all .2s ease;
+  position:relative;
+}
+
+.stv-candidate:hover{
+  border-color:rgba(224,0,15,.3);
+  box-shadow:0 4px 12px rgba(15,23,42,.08);
+}
+
+.stv-candidate:active{
+  cursor:grabbing;
+}
+
+.stv-rank-badge{
+  min-width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--primary);
+  color:#fff;
+  font-weight:700;
+  font-size:.85rem;
+  border-radius:8px;
+  flex-shrink:0;
+}
+
+.stv-rank-badge:empty{
+  background:transparent;
+  min-width:0;
+  width:0;
+  display:none;
+}
+
+.stv-candidate-image{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:2px solid rgba(224,0,15,0.1);
+}
+
+.stv-candidate-info{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.stv-candidate-name{
+  font-weight:600;
+  font-size:.95rem;
+  color:var(--text);
+}
+
+.stv-candidate-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.stv-linkedin{
+  color:var(--primary);
+  display:inline-flex;
+  align-items:center;
+}
+
+.stv-linkedin:hover{
+  opacity:.8;
+}
+
+button.stv-manifesto-btn{
+  background:none !important;
+  border:none !important;
+  color:var(--primary) !important;
+  font-size:.85rem !important;
+  font-weight:600;
+  cursor:pointer;
+  padding:0 !important;
+  box-shadow:none !important;
+}
+
+button.stv-manifesto-btn:hover{
+  text-decoration:underline;
+  transform:none !important;
+}
+
+button.stv-remove-btn{
+  background:rgba(220,53,69,.1) !important;
+  border:none !important;
+  color:#dc3545 !important;
+  font-size:.9rem !important;
+  font-weight:700;
+  cursor:pointer;
+  padding:4px 8px !important;
+  border-radius:6px !important;
+  margin-left:auto;
+  box-shadow:none !important;
+}
+
+button.stv-remove-btn:hover{
+  background:rgba(220,53,69,.2) !important;
+  transform:none !important;
+}
+
+.stv-statement{
+  width:100%;
+  margin-top:12px;
+  padding-left:44px;
+}
+
+.stv-statement[hidden]{
+  display:none;
+}
+
+.stv-statement-content{
+  padding:14px 16px;
+  background:rgba(224,0,15,.03);
+  border-radius:10px;
+  border:1px solid rgba(224,0,15,.08);
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+.stv-statement-content p{
+  margin:0 0 10px 0;
+}
+
+.stv-statement-content p:last-child{
+  margin-bottom:0;
+}
+
+/* SortableJS drag states */
+.stv-ghost{
+  opacity:.4;
+  background:#f8f9fa;
+}
+
+.stv-chosen{
+  box-shadow:0 8px 24px rgba(15,23,42,.15);
+}
+
+.stv-drag{
+  opacity:.9;
+}
+
+/* Empty state for ranked list */
+.stv-ranked .stv-list:empty::after{
+  content:'Drag candidates here or click to add';
+  display:block;
+  padding:24px;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:.9rem;
+  border:2px dashed rgba(224,0,15,.2);
+  border-radius:12px;
+}
+
+/* Responsive adjustments */
+@media (min-width:768px){
+  .stv-container{
+    flex-direction:row;
+    gap:20px;
+  }
+  .stv-section{
+    flex:1;
+    min-width:0;
+  }
+}

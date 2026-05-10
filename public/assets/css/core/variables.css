@@ -1,0 +1,20 @@
+/* ================================
+   Board Election — CSS Variables
+   ================================ */
+
+:root{
+  --bg:#f5f5f5;
+  --bg-accent:#fafafa;
+  --card:#ffffff;
+  --card-border:rgba(15,23,42,0.08);
+  --text:#160b47;
+  --muted:#5f6275;
+  --border:rgba(224,0,15,0.2);
+  --primary:#e0000f;
+  --primary-hover:#b00000;
+  --ok-bg:#e3fef0; --ok-fg:#0f766e;
+  --err-bg:#ffe8e8; --err-fg:#b42318;
+  --info-bg:#e6f2ff; --info-bd:rgba(0,98,255,0.25); --info-fg:#0062ff;
+  --radius:24px;
+  --gap:20px;
+}

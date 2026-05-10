@@ -1,0 +1,15 @@
+{
+  "host": "smtp.example.com",
+  "port": 587,
+  "encryption": "tls",
+  "username": "user@example.com",
+  "password": "your_password_here",
+  "from": {
+    "address": "noreply@example.com",
+    "name": "Election Bot"
+  },
+  "reply_to": {
+    "address": "support@example.com",
+    "name": "Election Support"
+  }
+}

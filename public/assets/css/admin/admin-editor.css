@@ -1,0 +1,82 @@
+/* ================================
+   Quill Editor Styling
+   ================================ */
+
+.quill-wrapper {
+  display: block;
+}
+
+.ql-container {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.ql-editor {
+  min-height: 140px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 16px 18px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.ql-editor.ql-blank::before {
+  color: var(--muted);
+  font-style: normal;
+  opacity: 0.7;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid rgba(15,23,42,0.12);
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  background: var(--bg-accent);
+  padding: 12px;
+}
+
+.ql-container.ql-snow {
+  border: 1px solid rgba(15,23,42,0.12);
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+  background: #fff;
+}
+
+.ql-toolbar .ql-stroke {
+  stroke: var(--text);
+}
+
+.ql-toolbar .ql-fill {
+  fill: var(--text);
+}
+
+.ql-toolbar button:hover,
+.ql-toolbar button:focus {
+  color: var(--primary);
+}
+
+.ql-toolbar button:hover .ql-stroke,
+.ql-toolbar button:focus .ql-stroke {
+  stroke: var(--primary);
+}
+
+.ql-toolbar button:hover .ql-fill,
+.ql-toolbar button:focus .ql-fill {
+  fill: var(--primary);
+}
+
+.ql-toolbar button.ql-active {
+  color: var(--primary);
+}
+
+.ql-toolbar button.ql-active .ql-stroke {
+  stroke: var(--primary);
+}
+
+.ql-toolbar button.ql-active .ql-fill {
+  fill: var(--primary);
+}
+
+.ql-editor a {
+  color: var(--primary);
+  text-decoration: underline;
+}

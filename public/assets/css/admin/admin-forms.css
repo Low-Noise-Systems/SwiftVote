@@ -1,0 +1,288 @@
+/* ================================
+   Candidates Management
+   ================================ */
+
+.candidates-success-box {
+  background: #dcfce7;
+  color: #047857;
+  border-color: rgba(4,120,87,0.25);
+}
+
+.candidates-success-box strong {
+  font-weight: 650;
+  color: #065f46;
+}
+
+.candidate-edit-btn {
+  font-size: 0.75rem !important;
+  padding: 0.4rem 0.8rem !important;
+  margin-right: 0.4rem;
+  white-space: nowrap;
+  min-width: auto;
+  border-radius: 8px !important;
+}
+
+.candidate-delete-form {
+  display: inline-block;
+  margin: 0;
+}
+
+.candidate-delete-form .candidate-edit-btn {
+  margin-right: 0;
+}
+
+/* Column widths for candidates table */
+#candidates-table th:nth-child(1),
+#candidates-table td:nth-child(1) {
+  width: 15%;
+}
+
+#candidates-table th:nth-child(2),
+#candidates-table td:nth-child(2) {
+  width: 20%;
+}
+
+#candidates-table th:nth-child(3),
+#candidates-table td:nth-child(3) {
+  width: 15%;
+}
+
+#candidates-table th:nth-child(4),
+#candidates-table td:nth-child(4) {
+  width: 35%;
+}
+
+#candidates-table th:nth-child(5),
+#candidates-table td:nth-child(5) {
+  width: 15%;
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+
+/* Make code tags not break layout */
+#candidates-table code {
+  font-size: 0.8em;
+  word-break: break-all;
+}
+
+.candidate-edit-row {
+  display: none;
+}
+
+.candidate-edit-form {
+  padding: clamp(20px, 3vw, 32px);
+  background: #f8f9fa;
+  border-radius: 12px;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.candidate-edit-form label {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.candidate-edit-form label .muted,
+.candidate-edit-form label span {
+  display: block;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.candidate-edit-form input,
+.candidate-edit-form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.candidate-form-actions {
+  display: flex;
+  gap: 0.5em;
+}
+
+/* ================================
+   Vote Key Management
+   ================================ */
+
+.hidden-section {
+  display: none;
+}
+
+#confirm-mnemonic {
+  margin-top: 8px;
+}
+
+/* ================================
+   General Form Styling
+   ================================ */
+
+/* General form label styling - labels above inputs */
+form label.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 500px;
+}
+
+form label.row .muted,
+form label.row span {
+  display: block;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Form inputs with reasonable width on desktop */
+form input[type="number"],
+form input[type="text"],
+form input[type="email"],
+form input[type="url"],
+form select {
+  max-width: 500px;
+}
+
+/* Form buttons with reasonable width */
+form button[type="submit"]:not(.candidate-edit-btn) {
+  max-width: 300px;
+}
+
+/* Admin form - 2 column layout on desktop */
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  align-items: start;
+}
+
+.admin-form label.row {
+  max-width: 100%;
+}
+
+.admin-form label.row input,
+.admin-form label.row select {
+  max-width: 100%;
+}
+
+/* Enhanced label styling for admin forms */
+.admin-form label.row .muted,
+.admin-form label.row span.muted {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.8;
+  letter-spacing: 0.01em;
+  margin-bottom: 2px;
+}
+
+.admin-form label.row small.muted {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  opacity: 1;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* Enhanced number input with stepper buttons */
+.admin-form label.row:has(input[type="number"]) {
+  position: relative;
+}
+
+.admin-form input[type="number"] {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  border: 1px solid rgba(15,23,42,0.15);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  transition: all 0.2s ease;
+  box-shadow: none;
+  max-width: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.admin-form input[type="number"]:hover {
+  border-color: rgba(15,23,42,0.25);
+}
+
+.admin-form input[type="number"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(224,0,15,0.1);
+  outline: none;
+}
+
+.admin-form input[type="number"]:disabled {
+  background: var(--bg-accent);
+  border-color: rgba(15,23,42,0.08);
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: var(--muted);
+}
+
+/* Number input wrapper reset */
+.number-input-wrapper {
+  display: inline-block;
+  max-width: 120px;
+}
+
+.number-stepper {
+  display: none;
+}
+
+/* Enhanced styling for select dropdowns in admin forms */
+.admin-form select {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 18px;
+  border: 2px solid rgba(15,23,42,0.12);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(15,23,42,0.04);
+  cursor: pointer;
+}
+
+.admin-form select:hover {
+  border-color: rgba(15,23,42,0.2);
+  box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+}
+
+.admin-form select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(224,0,15,0.1), 0 4px 12px rgba(15,23,42,0.08);
+  outline: none;
+}
+
+.admin-form select:disabled {
+  background: var(--bg-accent);
+  border-color: rgba(15,23,42,0.08);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Full-width items span both columns */
+.admin-form button[type="submit"] {
+  grid-column: 1 / -1;
+  max-width: 300px;
+  justify-self: start;
+}
+
+.inline-admin-link {
+  color: var(--primary);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.inline-admin-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+/* ================================
+   Board Election — Main Stylesheet
+   ================================ */
+
+/* Import modular stylesheets */
+@import url('core/variables.css');
+@import url('core/base.css');
+@import url('layout/layout.css');
+@import url('components/forms.css');
+@import url('components/components.css');
+@import url('components/candidate.css');
+@import url('components/modal.css');
+@import url('admin/admin-general.css');
+@import url('utilities/utilities.css');
+@import url('core/animations.css');
+@import url('layout/responsive.css');

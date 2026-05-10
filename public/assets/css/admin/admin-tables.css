@@ -1,0 +1,148 @@
+/* ================================
+   Admin Panel - Table Styles
+   ================================ */
+
+/* Tables - modern, clean styling */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: clamp(16px, 2vw, 24px) 0;
+  background: #fff;
+  border-radius: 18px;
+  table-layout: fixed;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.08);
+  animation: floatUp 0.6s ease forwards;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: clamp(12px, 1.8vw, 16px) clamp(14px, 2vw, 18px);
+  border-bottom: 1px solid rgba(15,23,42,0.08);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg-accent);
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.admin-table td {
+  color: var(--text);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: var(--bg-accent);
+  transform: scale(1.005);
+}
+
+.admin-table-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: clamp(12px, 1.5vw, 16px);
+}
+
+.admin-table-actions .admin-see-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 1.5vw, 14px) clamp(18px, 2.2vw, 24px);
+  border-radius: 30px;
+  background: linear-gradient(120deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(224,0,15,0.2);
+}
+
+.admin-table-actions .admin-see-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224,0,15,0.35);
+}
+
+.admin-table-actions .admin-see-more:active {
+  transform: translateY(0);
+}
+
+.admin-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(16px, 2vw, 24px);
+  gap: clamp(10px, 1.5vw, 14px);
+}
+
+.admin-pagination-info {
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  color: var(--muted);
+}
+
+.admin-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 14px);
+}
+
+.admin-pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 1.2vw, 12px) clamp(14px, 2vw, 18px);
+  border-radius: 24px;
+  background: linear-gradient(120deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(224,0,15,0.2);
+}
+
+.admin-pagination-btn,
+.admin-pagination-btn:visited,
+.admin-pagination-btn:hover {
+  color: #fff !important;
+}
+
+.admin-pagination-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(224,0,15,0.3);
+}
+
+.admin-pagination-btn:active {
+  transform: translateY(0);
+}
+
+.admin-pagination-btn.disabled {
+  background: rgba(15,23,42,0.1);
+  color: var(--muted);
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.admin-pagination-page {
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  font-weight: 600;
+  color: var(--text);
+}

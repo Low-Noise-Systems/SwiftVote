@@ -1,0 +1,162 @@
+/* ================================
+   Board Election — Utility Styles
+   ================================ */
+
+/* Flash & info cards */
+.flash{
+  padding:16px 20px;
+  border-radius:20px;
+  margin:0 0 var(--gap);
+  border:1px solid transparent;
+  font-weight:600;
+  box-shadow:0 12px 28px rgba(17,19,34,.08);
+}
+.ok{
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+  border:1px solid color-mix(in srgb, var(--ok-fg) 30%, transparent);
+}
+.flash.ok{
+  animation: flash-fade-out 0.5s ease-out forwards;
+  animation-delay: 30s;
+}
+.err{
+  background: var(--err-bg);
+  color: var(--err-fg);
+  border:1px solid color-mix(in srgb, var(--err-fg) 25%, transparent);
+}
+.info{
+  background: var(--info-bg);
+  color: var(--info-fg);
+  border:1px solid var(--info-bd);
+}
+.flash__warning{
+  background:#fff8e1;
+  color:#f57c00;
+  border:1px solid rgba(245,124,0,.25);
+  border-radius:12px;
+  padding:12px 16px;
+  margin-top:14px;
+  font-size:.9rem;
+  font-weight:500;
+  line-height:1.5;
+}
+.flash__warning strong{
+  color:#e65100;
+}
+
+/* Alert boxes */
+.alert {
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin: var(--gap) 0;
+  border: 1px solid;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.alert-warning {
+  background: var(--info-bg);
+  color: var(--info-fg);
+  border-color: var(--info-bd);
+}
+.alert-info {
+  background: var(--info-bg);
+  color: var(--info-fg);
+  border-color: var(--info-bd);
+}
+.alert-success {
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+  border-color: color-mix(in srgb, var(--ok-fg) 30%, transparent);
+}
+.alert-error {
+  background: var(--err-bg);
+  color: var(--err-fg);
+  border-color: color-mix(in srgb, var(--err-fg) 25%, transparent);
+}
+.alert strong {
+  font-weight: 700;
+}
+.alert a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.alert a:hover {
+  opacity: 0.85;
+}
+
+/* Mnemonic box for init tool */
+.mnemonic-box {
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin: var(--gap) 0;
+  word-break: break-word;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Key box for technical fingerprints */
+.key-box {
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  word-break: break-all;
+  text-align: left;
+  margin: var(--gap) 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Status messages */
+.status-message {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.status-success {
+  color: var(--ok-fg);
+  background: var(--ok-bg);
+  border: 1px solid color-mix(in srgb, var(--ok-fg) 30%, transparent);
+}
+.status-error {
+  color: var(--err-fg);
+  background: var(--err-bg);
+  border: 1px solid color-mix(in srgb, var(--err-fg) 25%, transparent);
+}
+
+/* Center utility class */
+.center {
+  text-align: center;
+}
+
+/* Section styling for init tool */
+section {
+  margin: calc(var(--gap) * 2) 0;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: var(--gap);
+}
+section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: var(--gap) 0 calc(var(--gap) * 0.5);
+  color: var(--text);
+}
+section hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: calc(var(--gap) * 2) 0;
+}

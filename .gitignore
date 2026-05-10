@@ -1,0 +1,68 @@
+# Environment and configuration
+.env
+.env.local
+.env.*.local
+/php-survey-backend/config/smtp_mailboxes.json
+/php-survey-backend/config/vote_params.json
+/php-survey-backend/config/admin_emails.txt
+/php-survey-backend/config/voter_emails.txt
+
+# Sensitive data directories
+/php-survey-backend/vote_data/*.csv
+/php-survey-backend/vote_data/*.json
+/php-survey-backend/vote_data/*.txt
+/php-survey-backend/vote_data/*.enc
+/php-survey-backend/vote_data/votes/*.enc
+!/php-survey-backend/vote_data/.htaccess
+
+# Cryptographic keys
+/php-survey-backend/data/pubkey.txt
+!/php-survey-backend/data/.htaccess
+
+# Rate limiting data (IP tracking)
+/php-survey-backend/data/rate_limits/
+
+# Logs
+/php-survey-backend/logs/*.log
+/php-survey-backend/logs/error_log*
+!/php-survey-backend/logs/.htaccess
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI assistant configs
+.claude/
+
+# Local-only dev scripts and deployment helpers
+/tools/
+/deploy_rsync.sh
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Composer
+/vendor/
+composer.phar
+
+# Node modules (if any)
+/node_modules/
+
+# Build artifacts
+/dist/
+/build/

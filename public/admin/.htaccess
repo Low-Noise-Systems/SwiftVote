@@ -1,0 +1,28 @@
+# ============================================
+# ADMIN DIRECTORY PROTECTION
+# ============================================
+
+# Disable directory browsing (compatible)
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Security headers for admin section
+<IfModule mod_headers.c>
+    # Prevent clickjacking - stricter for admin
+    Header set X-Frame-Options "DENY"
+
+    # Strict XSS protection
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Block direct access to include files and guard files (defense in depth)
+<FilesMatch "(onboarding-banner|admin_guard)\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

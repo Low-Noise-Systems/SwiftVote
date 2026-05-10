@@ -1,0 +1,6 @@
+{
+    "min_picks": 3,
+    "max_picks": 9,
+    "allow_multiple_votes": false,
+    "include_candidate_names_in_receipt": false
+}

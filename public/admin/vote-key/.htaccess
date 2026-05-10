@@ -1,0 +1,9 @@
+# ============================================
+# ADMIN INIT DIRECTORY PROTECTION
+# ============================================
+# Admin initialization endpoints - access restricted by PHP code
+
+# Disable directory browsing (compatible)
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>

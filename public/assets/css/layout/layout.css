@@ -1,0 +1,223 @@
+/* ================================
+   Board Election — Layout Styles
+   ================================ */
+
+/* Main wrapper for centering */
+.main-wrapper{
+  width:100%;
+  max-width:1032px;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+/* For non-flow-shell pages (admin), center the wrapper */
+body:not(.flow-shell) .main-wrapper{
+  margin:0 auto;
+}
+
+/* Card container */
+.card{
+  width:min(1032px,100%);
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  box-shadow:0 35px 80px rgba(17,19,34,.12);
+  padding:clamp(28px,4vw,56px);
+  position:relative;
+  overflow:hidden;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border-radius:calc(var(--radius) - 6px);
+  pointer-events:none;
+  border:1px solid rgba(224,0,15,0.04);
+}
+.card > *{position:relative}
+
+.flow-stack{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(10px,1.5vw,14px);
+}
+.flow-brand h1{
+  margin:0;
+  font-size:clamp(1.4rem,2vw,1.8rem);
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
+h1{
+  margin:0 0 12px;
+  font-size:clamp(1.4rem,2vw,1.8rem);
+  font-weight:700;
+  color:var(--text);
+}
+h2{
+  margin:clamp(18px,3vw,28px) 0 8px;
+  font-size:1.2rem;
+  color:var(--text);
+  font-weight:600;
+}
+.flow-step{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  animation:floatUp .6s ease forwards;
+  background:var(--bg-accent);
+  border-radius:calc(var(--radius) - 8px);
+  padding:clamp(20px,3vw,32px);
+  border:1px solid rgba(17,19,34,0.04);
+}
+.flow-step:not(.flow-brand){box-shadow:0 16px 40px rgba(15,23,42,.08);}
+.flow-step.inset{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+.step-eyebrow{
+  text-transform:uppercase;
+  font-size:.75rem;
+  letter-spacing:0.1em;
+  color:color-mix(in srgb, var(--primary) 60%, var(--muted));
+  font-weight:600;
+}
+.step-title{
+  margin:0;
+  font-size:clamp(1.4rem,2.6vw,2rem);
+  font-weight:650;
+  color:var(--text);
+  line-height:1.2;
+}
+.step-lede,
+.flow-copy,
+.muted{
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.6;
+  margin:0;
+}
+
+.flow-actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.flow-support{
+  font-size:.9rem;
+  color:color-mix(in srgb, var(--muted) 90%, white);
+}
+
+.flow-announcement{
+  background:#fff;
+  border-radius:calc(var(--radius) - 6px);
+  border:1px solid rgba(15,23,42,.08);
+  padding:clamp(20px,3vw,28px);
+  box-shadow:0 20px 40px rgba(15,23,42,.08);
+}
+
+.announcement-container{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.announcement-content{
+  line-height:1.7;
+  color:var(--text);
+}
+
+/* Small logo shown under announcements */
+.announcement-logo{
+  display:block;
+  margin:1rem auto 0;
+  width:96px;
+  max-width:32%;
+  height:auto;
+  object-fit:contain;
+  opacity:0.98;
+}
+
+.flow-shell .election-brief{
+  background:var(--bg-accent);
+  border-radius:calc(var(--radius) - 8px);
+  border:1px solid rgba(15,23,42,.08);
+  box-shadow:0 18px 40px rgba(15,23,42,.05);
+  padding:clamp(22px,3vw,32px);
+}
+.election-brief h2{
+  margin-top:0;
+  font-size:1.35rem;
+}
+.election-brief h3{
+  margin:var(--gap) 0 6px;
+  font-size:1rem;
+  color:var(--text);
+}
+.election-brief p{
+  margin:0 0 12px;
+  line-height:1.6;
+}
+.election-brief ul{
+  margin:0 0 8px 1.2rem;
+  padding:0;
+  color:var(--muted);
+}
+.election-brief li{
+  margin-bottom:6px;
+}
+.election-brief__summary{
+  margin-bottom:16px;
+}
+.election-brief__toggle{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  padding:12px 16px;
+  background:var(--primary);
+  color:#ffffff;
+  border:none;
+  border-radius:8px;
+  font-size:.95rem;
+  font-weight:500;
+  cursor:pointer;
+  transition:all .2s ease;
+  margin:8px 0 16px;
+}
+.election-brief__toggle:hover{
+  background:color-mix(in srgb, var(--primary) 85%, black);
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(224,0,15,.2);
+}
+.election-brief__toggle:active{
+  transform:translateY(0);
+}
+.toggle-text{
+  flex:1;
+  text-align:left;
+}
+.toggle-icon{
+  transition:transform .3s ease;
+  flex-shrink:0;
+}
+.election-brief__toggle[aria-expanded="true"] .toggle-icon{
+  transform:rotate(180deg);
+}
+.election-brief__details{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease-out, opacity .3s ease;
+  opacity:0;
+}
+.election-brief__details.is-expanded{
+  max-height:2000px;
+  opacity:1;
+  transition:max-height .5s ease-in, opacity .4s ease;
+}
+.election-brief__details .election-brief__section:first-child{
+  margin-top:12px;
+}

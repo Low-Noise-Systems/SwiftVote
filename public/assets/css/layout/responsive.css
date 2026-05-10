@@ -1,0 +1,67 @@
+/* ================================
+   Board Election — Responsive Styles
+   ================================ */
+
+@media (max-width:640px){
+  body.flow-shell{
+    padding:32px 16px;
+  }
+  .card{
+    padding:24px 18px;
+  }
+  .flow-step{
+    padding:20px;
+  }
+  .candidate-list{
+    gap:24px;
+  }
+  .candidate-card{
+    border-radius:14px;
+    background:#fff;
+    border:2px solid rgba(15,23,42,.25);
+    box-shadow:0 4px 20px rgba(15,23,42,.15);
+  }
+  .candidate-card:has(input[type=checkbox]:checked){
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(224,0,15,.12), 0 4px 16px rgba(224,0,15,.18);
+  }
+  .candidate-card-main{
+    padding:16px 18px;
+    gap:12px;
+  }
+  .candidate-image{
+    width:48px;
+    height:48px;
+  }
+  .candidate-statement-content{
+    padding:14px 18px;
+  }
+  .election-brief__toggle{
+    padding:14px 16px;
+    font-size:.9rem;
+  }
+  .announcement-logo{ width:72px; max-width:40%; }
+}
+
+@media (max-width:480px){
+  .modal-dialog{
+    padding:16px;
+    padding-right:44px;
+  }
+  .modal-dialog h4{
+    font-size:16px;
+  }
+  .modal-close{
+    top:10px;
+    right:10px;
+    width:30px;
+    height:30px;
+    font-size:18px;
+  }
+}
+
+/* Accessibility / motion */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important}
+  .flash.ok{animation:none;}
+}
